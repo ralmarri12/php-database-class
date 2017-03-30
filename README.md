@@ -214,7 +214,7 @@ use PHPtricks\Database;
 $db = Database::connect();
 $user = $db->table('users')->find('1');
 $user->name = 'Mohammad';
-$user->email = team@phptricks.org;
+$user->email = 'team@phptricks.org';
 $user->save();
 ```
 is this example we configure "fetch" to array
@@ -224,7 +224,7 @@ use PHPtricks\Database;
 $db = Database::connect();
 $user = $db->table('users')->find('1');
 $user['name'] = 'Mohammad';
-$user['email'] = team@phptricks.org;
+$user['email'] = 'team@phptricks.org';
 $user->save();
 ```
 but you cant use __save__ with multi rows
@@ -466,7 +466,7 @@ for example :
 
 // OK
 $db->table('posts')
-    ->orderBy('id', 'DESC)
+    ->orderBy('id', 'DESC')
     ->limit(10)
     ->select();
     
